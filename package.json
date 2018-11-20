@@ -32,7 +32,10 @@
   "name": "@jmbl1685/logger",
   "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest test/test.js --detectOpenHandles --forceExit"
   },
-  "version": "1.0.8"
+  "version": "1.0.8",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
 }
