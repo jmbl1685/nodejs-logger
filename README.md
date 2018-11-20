@@ -2,6 +2,9 @@
 
 Logger System for Nodejs using MongoDB
 
+[![Build Status](https://travis-ci.org/jmbl1685/jmbl1685-logger.svg?branch=master)](https://travis-ci.org/jmbl1685/jmbl1685-logger)
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/jmbl1685/jmbl1685-logger#readme)
+
 ## Installation
 
 ```sh
