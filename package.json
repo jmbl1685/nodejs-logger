@@ -1,6 +1,6 @@
 {
   "_from": "@jmbl1685/logger",
-  "_id": "@jmbl1685/logger@1.0.8",
+  "_id": "@jmbl1685/logger@1.0.9",
   "_inBundle": false,
   "_integrity": "sha512-DsxPNM6ZT8/lN1vk83t9h9HxB5uhlIsqD/XJ1bHeCgKj7kQpbu6WLkGO6+8x14yGiCRl8rDKu+HDYwoL2F76EQ==",
   "_location": "/@jmbl1685/logger",
@@ -19,7 +19,7 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/@jmbl1685/logger/-/logger-1.0.8.tgz",
+  "_resolved": "https://registry.npmjs.org/@jmbl1685/logger/-/logger-1.0.9.tgz",
   "_shasum": "42397edea4ddb8a037701024fd4dd64b50bfab22",
   "_spec": "@jmbl1685/logger",
   "_where": "C:\\Windows\\system32",
@@ -34,7 +34,7 @@
   "scripts": {
     "test": "jest test/test.js --detectOpenHandles --forceExit"
   },
-  "version": "1.0.8",
+  "version": "1.0.9",
   "devDependencies": {
     "jest": "^23.6.0"
   }
