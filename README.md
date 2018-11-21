@@ -38,6 +38,32 @@ logger({
   }
 })
 ```
+
+```js
+'use strict'
+
+import _logger from '@jmbl1685/logger'
+
+const logger = _logger({
+  host: 'mongodb://user:password@ds115758.xxxx.com:15758/namedb',
+  logname: 'logs' /* Optional */
+})
+
+logger({
+  ip: '192.168.1.67',
+  body: {
+    name: 'Juan Manuel',
+    lastname: 'Batty Linero'
+  },
+  response: {
+    message: 'User created'
+  },
+  otherfield:{
+    ...
+  }
+})
+```
+
 [![Module Logo](https://image.ibb.co/i6NvPf/examaple.png)](https://www.npmjs.com/package/@jmbl1685/logger)
 
 ## Used modules
