@@ -1,0 +1,17 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# Build NodeJS Express app using Azure Pipelines
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript?view=vsts
+
+pool:
+  vmImage: 'Ubuntu 16.04'
+  
+steps:
+- task: Azure Pipelines Test
+  inputs:
+    versionSpec: '8.x'
+  
+- script: |
+    npm install
+    npm run test
