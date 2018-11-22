@@ -4,7 +4,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
   
 steps:
-- task: NodeTool@0
+- task: Azure Pipelines Test
   inputs:
     versionSpec: '8.x'
   
