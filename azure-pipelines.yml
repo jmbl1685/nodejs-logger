@@ -8,7 +8,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
   
 steps:
-- task: Azure Pipelines Test
+- task: nodejs-logger-test
   inputs:
     versionSpec: '8.x'
   
