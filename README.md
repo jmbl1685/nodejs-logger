@@ -24,6 +24,8 @@ const logger = require('@jmbl1685/logger')({
   logname: 'logs' /* Optional */
 })
 
+// You can save anything in the log...
+
 logger({
   ip: '192.168.1.67',
   body: {
@@ -33,10 +35,19 @@ logger({
   response: {
     message: 'User created'
   },
+})
+
+logger({
+  value:{
+    name: 'Juan
+  },
+  error: 'Not error'
+  status: false
   otherfield:{
     ...
   }
 })
+
 ```
 
 ```js
@@ -45,23 +56,20 @@ logger({
 import _logger from '@jmbl1685/logger'
 
 const logger = _logger({
-  host: 'mongodb://user:password@ds115758.xxxx.com:15758/namedb',
-  logname: 'logs' /* Optional */
+  host: 'mongodb://user:password@ds115758.xxxx.com:15758/namedb'
 })
 
+// You can save anything in the log...
+
 logger({
-  ip: '192.168.1.67',
   body: {
     name: 'Juan Manuel',
-    lastname: 'Batty Linero'
-  },
-  response: {
-    message: 'User created'
-  },
-  otherfield:{
-    ...
+    lastname: 'Batty Linero',
+    state: true,
+    identification: 12345
   }
 })
+
 ```
 
 [![Module Logo](https://image.ibb.co/i6NvPf/examaple.png)](https://www.npmjs.com/package/@jmbl1685/logger)
