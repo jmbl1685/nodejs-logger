@@ -25,7 +25,6 @@ const logger = require('@jmbl1685/logger')({
 })
 
 // You can save anything in the log...
-
 logger({
   ip: '192.168.1.67',
   body: {
@@ -39,10 +38,10 @@ logger({
 
 logger({
   value:{
-    name: 'Juan
+    name: 'Juan'
   },
-  error: 'Not error'
-  status: false
+  error: 'Not error',
+  status: false,
   otherfield:{
     ...
   }
@@ -60,7 +59,6 @@ const logger = _logger({
 })
 
 // You can save anything in the log...
-
 logger({
   body: {
     name: 'Juan Manuel',
