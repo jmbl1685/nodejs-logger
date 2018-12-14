@@ -2,6 +2,7 @@
 
 Logger System for Nodejs using MongoDB
 
+[![Build Status](https://dev.azure.com/jmbl1685-github/github/_apis/build/status/jmbl1685.nodejs-logger?branchName=master)](https://dev.azure.com/jmbl1685-github/github/_build/latest?definitionId=1?branchName=master)
 [![Build Status](https://travis-ci.org/jmbl1685/nodejs-logger.svg?branch=master)](https://travis-ci.org/jmbl1685/nodejs-logger)
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/jmbl1685/nodejs-logger/blob/master/LICENSE)
 
