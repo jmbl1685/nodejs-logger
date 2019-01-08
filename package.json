@@ -1,6 +1,6 @@
 {
   "_from": "@jmbl1685/logger",
-  "_id": "@jmbl1685/logger@1.0.15",
+  "_id": "@jmbl1685/logger@1.0.16",
   "_inBundle": false,
   "_integrity": "sha512-8Jjd67ZnKO7OCOoBsUwG0Qc2KbVP41ABYamGAZt21SJQkDmycX5X2IEkPDv1uU9RFwWkCvPuJj2aGtJaY6wPjQ==",
   "_location": "/@jmbl1685/logger",
@@ -19,7 +19,7 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/@jmbl1685/logger/-/logger-1.0.15.tgz",
+  "_resolved": "https://registry.npmjs.org/@jmbl1685/logger/-/logger-1.0.16.tgz",
   "_shasum": "ca2e872b34f80d3f0761123ecc65515bb7ebcada",
   "_spec": "@jmbl1685/logger",
   "_where": "C:\\Users\\Juan Manuel\\Desktop\\log-test",
@@ -57,7 +57,7 @@
     "build": "tsc",
     "test": "jest test/test.js --detectOpenHandles --forceExit"
   },
-  "version": "1.0.15",
+  "version": "1.0.16",
   "main": "./dist/index.js",
   "bin": "./dist"
 }

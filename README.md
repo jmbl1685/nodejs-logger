@@ -5,6 +5,10 @@ Logger System for Nodejs using MongoDB
 [![Build Status](https://dev.azure.com/jmbl1685-github/github/_apis/build/status/jmbl1685.nodejs-logger?branchName=master)](https://dev.azure.com/jmbl1685-github/github/_build/latest?definitionId=1?branchName=master)
 [![Build Status](https://travis-ci.org/jmbl1685/nodejs-logger.svg?branch=master)](https://travis-ci.org/jmbl1685/nodejs-logger)
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/jmbl1685/nodejs-logger/blob/master/LICENSE)
+[![JavaScript](https://img.shields.io/badge/%3C%2F%3E-Javascript-yellow.svg)](https://github.com/jmbl1685/nodejs-logger/blob/master/dist/index.js)
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg)](https://github.com/jmbl1685/nodejs-logger/blob/master/index.ts)
+
+
 
 ## Installation
 
@@ -19,7 +23,7 @@ How to use the module? Easy!!
 ```js
 'use strict'
 
-const logger = require('./dist/index').default({
+const logger = require('@jmbl1685/logger').default({
   host: 'mongodb://user:password@ds115758.xxxx.com:15758/namedb',
   logname: 'logs' /* Optional */
 })
