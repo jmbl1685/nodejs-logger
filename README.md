@@ -14,13 +14,12 @@ $ npm install @jmbl1685/logger
 
 ## Quick Start
 
-
 How to use the module? Easy!!
 
 ```js
 'use strict'
 
-const logger = require('@jmbl1685/logger')({
+const logger = require('./dist/index').default({
   host: 'mongodb://user:password@ds115758.xxxx.com:15758/namedb',
   logname: 'logs' /* Optional */
 })
@@ -35,17 +34,12 @@ logger({
   response: {
     message: 'User created'
   },
+  ...
 })
 
 logger({
-  value:{
-    name: 'Juan'
-  },
-  error: 'Not error',
-  status: false,
-  otherfield:{
-    ...
-  }
+  transactionDate: Date.now(),
+  ...
 })
 
 ```

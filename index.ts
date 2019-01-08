@@ -1,16 +1,12 @@
-'use strict'
+import * as mongoose from "mongoose";
+import { IConfig, NameLogHandle } from "./helpers";
 
-const mongoose = require('mongoose');
-let model = {};
+let _model: any = {};
 
-const NameLogHandle = (name) =>
-  (name == null || name == undefined || name.trim() == "") ? "logs" : name;
-
-module.exports = (config) => {
+export default (config: IConfig) => {
 
   (
     function Connection() {
-      mongoose.Promise = global.Promise;
       mongoose.set('useCreateIndex', true);
       mongoose.set('useNewUrlParser', true);
       mongoose.connect(config.host, { useNewUrlParser: true })
@@ -20,7 +16,7 @@ module.exports = (config) => {
 
   (
     function LoggerDefinition() {
-      const log = mongoose.Schema({
+      const log = new mongoose.Schema({
         createdAt: {
           type: Date,
           default: Date.now()
@@ -29,12 +25,11 @@ module.exports = (config) => {
           type: Object
         }
       }, { versionKey: false });
-
-      model = mongoose.model(NameLogHandle(config.logname), log);
+      _model = mongoose.model(NameLogHandle(config.logname), log);
     }
   )();
 
-  return function logger(data) {
-    return model.insertMany({ info: data })
+  return function logger(data: any) {
+    return _model.insertMany({ info: data })
   }
 }

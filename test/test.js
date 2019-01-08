@@ -1,6 +1,6 @@
 'use strict'
 
-const logger = require('../index')({
+const logger = require('../dist/index').default({
   host: process.env.MONGODB_CONNECTION,
   logname: 'logs'
 })
