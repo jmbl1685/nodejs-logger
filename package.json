@@ -1,63 +1,35 @@
 {
-  "_from": "@jmbl1685/logger",
-  "_id": "@jmbl1685/logger@1.0.17",
-  "_inBundle": false,
-  "_integrity": "sha512-8Jjd67ZnKO7OCOoBsUwG0Qc2KbVP41ABYamGAZt21SJQkDmycX5X2IEkPDv1uU9RFwWkCvPuJj2aGtJaY6wPjQ==",
-  "_location": "/@jmbl1685/logger",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "@jmbl1685/logger",
-    "name": "@jmbl1685/logger",
-    "escapedName": "@jmbl1685%2flogger",
-    "scope": "@jmbl1685",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/@jmbl1685/logger/-/logger-1.0.17.tgz",
-  "_shasum": "ca2e872b34f80d3f0761123ecc65515bb7ebcada",
-  "_spec": "@jmbl1685/logger",
-  "_where": "C:\\Users\\Juan Manuel\\Desktop\\log-test",
-  "bugs": {
-    "url": "https://github.com/jmbl1685/jmbl1685-logger/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "@types/mongodb": "^3.1.18",
-    "@types/mongoose": "^5.3.7",
-    "mongoose": "^5.3.12"
-  },
-  "deprecated": false,
-  "description": "Logger system in Nodejs with MongoDB",
-  "devDependencies": {
-    "jest": "^23.6.0"
-  },
-  "homepage": "https://github.com/jmbl1685/jmbl1685-logger#readme",
-  "keywords": [
-    "logger",
-    "logs",
-    "log",
-    "nodejs",
-    "mongodb",
-    "mongoose"
-  ],
-  "license": "MIT",
-  "name": "@jmbl1685/logger",
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jmbl1685/jmbl1685-logger.git"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "jest test/test.js --detectOpenHandles --forceExit"
-  },
-  "version": "1.0.17",
-  "main": "./dist/index.js",
-  "bin": "./dist"
+	"name": "@jmbl1685/logger",
+	"version": "1.0.18",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"test": "jest --env=node --colors --coverage test --detectOpenHandles --forceExit",
+		"dev": "nodemon ./example/example.ts --exec ts-node",
+		"prettier": "prettier --write ./**/**/*.ts && npm run lint",
+		"lint": "tslint --project ./tsconfig.json",
+		"publish:patch": "npm version patch -f && npm publish",
+		"pack": "npm run prettier && npm run build",
+		"deploy": "npm run pack && npm run publish:patch"
+	},
+	"keywords": [],
+	"author": "Juan Batty",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/jest": "^24.0.25",
+		"@types/mongoose": "^5.5.38",
+		"@types/node": "^12.12.6",
+		"jest": "^24.9.0",
+		"nodemon": "^2.0.2",
+		"prettier": "^1.19.1",
+		"prettier-tslint": "^0.4.2",
+		"ts-jest": "^24.2.0",
+		"ts-node": "^8.5.4",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.7.4"
+	},
+	"dependencies": {
+		"mongoose": "^5.8.4"
+	}
 }

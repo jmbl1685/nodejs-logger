@@ -1,29 +1,52 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose = require("mongoose");
-var helpers_1 = require("./helpers");
-var _model = {};
-exports.default = (function (config) {
+const mongoose_1 = require("mongoose");
+const helpers_1 = require("./helpers");
+let loggerModel = {};
+exports.default = (config) => {
     (function Connection() {
-        mongoose.set("useCreateIndex", true);
-        mongoose.set("useNewUrlParser", true);
-        mongoose
-            .connect(config.host, { useNewUrlParser: true })
-            .catch(function (err) { return console.log(err); });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                yield mongoose_1.connect(config.host, mongooseSettings());
+            }
+            catch (err) {
+                /* tslint:disable-next-line no-console */
+                console.log('Connection [error]: ', err.message);
+            }
+        });
     })();
     (function LoggerDefinition() {
-        var log = new mongoose.Schema({
+        const log = new mongoose_1.Schema({
             createdAt: {
                 type: Date,
-                default: Date.now()
+                default: Date.now(),
             },
             info: {
-                type: Object
-            }
+                type: Object,
+            },
         }, { versionKey: false });
-        _model = mongoose.model(helpers_1.NameLogHandle(config.logname), log);
+        loggerModel = mongoose_1.model(helpers_1.nameLogHandler(config.logname), log);
     })();
     return function logger(data) {
-        return _model.insertMany({ info: data });
+        return loggerModel.insertMany({ info: data });
     };
-});
+};
+const mongooseSettings = () => {
+    const settings = {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: true,
+    };
+    return settings;
+};
+//# sourceMappingURL=index.js.map

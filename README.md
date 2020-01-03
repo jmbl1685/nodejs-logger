@@ -8,8 +8,6 @@ Logger System for Nodejs using MongoDB
 [![JavaScript](https://img.shields.io/badge/%3C%2F%3E-Javascript-yellow.svg)](https://github.com/jmbl1685/nodejs-logger/blob/master/dist/index.js)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg)](https://github.com/jmbl1685/nodejs-logger/blob/master/index.ts)
 
-
-
 ## Installation
 
 ```sh
@@ -24,7 +22,7 @@ How to use the module? Easy!!
 'use strict'
 
 const logger = require('@jmbl1685/logger').default({
-  host: 'mongodb://user:password@ds115758.xxxx.com:15758/namedb',
+  host: '{{your_mongo_connection_string}}',
   logname: 'logs' /* Optional */
 })
 
@@ -49,31 +47,30 @@ logger({
 ```
 
 ```js
-'use strict'
+'use strict';
 
-import _logger from '@jmbl1685/logger'
+import NodeLogger from '@jmbl1685/logger';
 
-const logger = _logger({
-  host: 'mongodb://user:password@ds115758.xxxx.com:15758/namedb'
-})
+const logger = NodeLogger({
+	host: '{{your_mongo_connection_string}}',
+});
 
 // You can save anything in the log...
 logger({
-  body: {
-    name: 'Juan Manuel',
-    lastname: 'Batty Linero',
-    state: true,
-    identification: 12345
-  }
-})
-
+	body: {
+		name: 'Juan Manuel',
+		lastname: 'Batty Linero',
+		state: true,
+		identification: 12345,
+	},
+});
 ```
 
 [![Module Logo](https://image.ibb.co/i6NvPf/examaple.png)](https://www.npmjs.com/package/@jmbl1685/logger)
 
 ## Used modules
-* Mongoose https://github.com/Automattic/mongoose#readme
 
+-   Mongoose https://github.com/Automattic/mongoose#readme
 
 ## License
 

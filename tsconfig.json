@@ -1,9 +1,16 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "./dist",
-    "strict": true
-  }
+	"compileOnSave": false,
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"baseUrl": ".",
+		"outDir": "dist",
+		"lib": ["es2018", "dom"],
+		"sourceMap": true,
+		"declaration": true,
+		"strict": true,
+		"moduleResolution": "node"
+	},
+	"include": ["src/**/*.ts", "__tests__/**/*"],
+	"exclude": ["node_modules", "dist", "example", "**/*.spec.ts"]
 }
