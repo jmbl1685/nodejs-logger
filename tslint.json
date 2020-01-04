@@ -1,14 +1,13 @@
 {
-	"extends": ["tslint:latest", "tslint-config-prettier"],
-	"rules": {
-		"indent": [true, "tabs", 2],
-		"interface-name": [false, "never-prefix"],
-		"max-line-length": [false, 140],
-		"no-implicit-dependencies": [true, "dev"],
-		"quotemark": [true, "single", "avoid-escape"],
-		"no-var-requires": false,
-		"object-literal-sort-keys": false,
-		"no-angle-bracket-type-assertion": false,
-		"no-empty-interface": false
-	}
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": [false, "never-prefix"],
+    "no-implicit-dependencies": [true, "dev"],
+    "quotemark": [true, "single", "avoid-escape"],
+    "no-var-requires": false,
+    "object-literal-sort-keys": false,
+    "no-angle-bracket-type-assertion": false,
+    "no-empty-interface": false,
+    "no-submodule-imports": false
+  }
 }

@@ -13,6 +13,7 @@ const mongoose_1 = require("mongoose");
 const helpers_1 = require("./helpers");
 let loggerModel = {};
 exports.default = (config) => {
+    ;
     (function Connection() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -28,11 +29,11 @@ exports.default = (config) => {
         const log = new mongoose_1.Schema({
             createdAt: {
                 type: Date,
-                default: Date.now(),
+                default: Date.now()
             },
             info: {
-                type: Object,
-            },
+                type: Object
+            }
         }, { versionKey: false });
         loggerModel = mongoose_1.model(helpers_1.nameLogHandler(config.logname), log);
     })();
@@ -45,7 +46,7 @@ const mongooseSettings = () => {
         useCreateIndex: true,
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useFindAndModify: true,
+        useFindAndModify: true
     };
     return settings;
 };
