@@ -1,35 +1,35 @@
 {
-	"name": "@jmbl1685/logger",
-	"version": "1.0.18",
-	"description": "",
-	"main": "dist/index.js",
-	"scripts": {
-		"build": "tsc",
-		"test": "jest --env=node --colors --coverage test --detectOpenHandles --forceExit",
-		"dev": "nodemon ./example/example.ts --exec ts-node",
-		"prettier": "prettier --write ./**/**/*.ts && npm run lint",
-		"lint": "tslint --project ./tsconfig.json",
-		"publish:patch": "npm version patch -f && npm publish",
-		"pack": "npm run prettier && npm run build",
-		"deploy": "npm run pack && npm run publish:patch"
-	},
-	"keywords": [],
-	"author": "Juan Batty",
-	"license": "ISC",
-	"devDependencies": {
-		"@types/jest": "^24.0.25",
-		"@types/mongoose": "^5.5.38",
-		"@types/node": "^12.12.6",
-		"jest": "^24.9.0",
-		"nodemon": "^2.0.2",
-		"prettier": "^1.19.1",
-		"prettier-tslint": "^0.4.2",
-		"ts-jest": "^24.2.0",
-		"ts-node": "^8.5.4",
-		"tslint-config-prettier": "^1.18.0",
-		"typescript": "^3.7.4"
-	},
-	"dependencies": {
-		"mongoose": "^5.8.4"
-	}
+  "name": "@jmbl1685/logger",
+  "version": "1.0.18",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --env=node --colors --coverage test --detectOpenHandles --forceExit",
+    "dev": "nodemon ./example/example.ts --exec ts-node",
+    "prettier": "prettier --write ./**/**/*.json && npm run lint",
+    "lint": "tslint --project ./tsconfig.json",
+    "publish:patch": "npm version patch -f && npm publish",
+    "pack": "npm run prettier && npm run build",
+    "deploy": "npm run pack && npm run publish:patch"
+  },
+  "keywords": [],
+  "author": "Juan Batty",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.25",
+    "@types/mongoose": "^5.5.38",
+    "@types/node": "^12.12.6",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "prettier-tslint": "^0.4.2",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "mongoose": "^5.8.4"
+  }
 }

@@ -3,7 +3,7 @@ const logger = require('../dist/index').default({
   logname: 'logs'
 })
 
-describe('@jmbl1685/logger [module test]', async () => {
+describe('@jmbl1685/logger [module test]', () => {
   it('Save log in Database', async () => {
     const data = await logger({
       ip: '192.168.1.66',
