@@ -1,13 +1,13 @@
 {
   "name": "@jmbl1685/logger",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest --env=node --colors --coverage test --detectOpenHandles --forceExit",
     "dev": "nodemon ./example/example.ts --exec ts-node",
-    "prettier": "prettier --write ./**/**/*.json && npm run lint",
+    "prettier": "prettier --write ./**/**/*.ts && npm run lint",
     "lint": "tslint --project ./tsconfig.json",
     "publish:patch": "npm version patch -f && npm publish",
     "pack": "npm run prettier && npm run build",
